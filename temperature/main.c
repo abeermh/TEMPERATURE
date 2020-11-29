@@ -45,7 +45,7 @@ void Display_tempTTL(){
 	u16 t;
   		LM35_Init();
  		DIO_VidSetPortDirection(PORTD, 0x02);
- 		UART_VidInit(ASYNC_NORM_BAUD, 9600);
+ 		UART_VidInit(ASYNC_NORM_BAUD, BR0_9600);
 		while(1){
  			LM35_VidRead(&temp);
  			t=(u16)temp;
